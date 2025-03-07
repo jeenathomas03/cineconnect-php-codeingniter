@@ -1,0 +1,25 @@
+
+h1{
+   text-align: center;
+   background: plum;
+   border: 3px solid dimgrey;
+   }
+table{
+	    border: 5px groove black;
+      border-collapse: collapse;
+      width: 100%;
+      text-align: center;
+     }
+th{
+   text-align: center;
+   border:3px groove black;
+   height: 100px;
+   font-size: 40px;
+  }
+td{
+   height: 60px;
+   font-size: 25px;
+  }
+td.Product{
+        text-align: right;
+          }

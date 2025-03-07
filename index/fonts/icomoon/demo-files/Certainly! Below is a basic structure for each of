@@ -1,0 +1,116 @@
+Certainly! Below is a basic structure for each of the requested pages using HTML. Remember, this example focuses on structure and basic functionality as specified in your request. Styling (CSS) and backend functionality (like form submission handling) are not included here.
+
+### 1. News Listing Page (index.html)
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website - Home</title>
+</head>
+<body>
+    <h1>Latest News</h1>
+    <ul>
+        <li>
+            <a href="news-detail.html">
+                <h2>News Heading 1</h2>
+            </a>
+            <p>One sentence about the news as a paragraph written below the heading.</p>
+        </li>
+        <li>
+            <a href="news-detail.html">
+                <h2>News Heading 2</h2>
+            </a>
+            <p>One sentence about the news as a paragraph written below the heading.</p>
+        </li>
+        <!-- Add more news items following the same structure -->
+    </ul>
+</body>
+</html>
+
+
+### 2. News Details Page (news-detail.html)
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website - News Detail</title>
+</head>
+<body>
+    <h1>News Heading</h1>
+    <p>Detailed paragraph about the news.</p>
+    <img src="news-image.jpg" alt="News Image">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/video-id" frameborder="0" allowfullscreen></iframe>
+    
+    <h2>Comments</h2>
+    <form action="submit-comment.php" method="POST">
+        <textarea name="comment" rows="4" cols="50" placeholder="Write your comment here..."></textarea><br>
+        <input type="submit" value="Submit Comment">
+    </form>
+</body>
+</html>
+
+
+### 3. About Us Page (about-us.html)
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - News Website</title>
+</head>
+<body>
+    <h1>About Us</h1>
+    <p>Insert multiple paragraphs about the news website here. You can copy this content from any source for the sake of the exam.</p>
+</body>
+</html>
+
+
+### 4. Contact Us Page (contact-us.html)
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - News Website</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form action="submit-contact.php" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="mobile">Mobile Number:</label><br>
+        <input type="tel" id="mobile" name="mobile" required><br><br>
+        
+        <label for="communication-type">Type of Communication:</label><br>
+        <select id="communication-type" name="communication-type">
+            <option value="sales">Sales</option>
+            <option value="service">Service</option>
+            <option value="enquiry">Enquiry</option>
+            <option value="advertisement">Advertisement</option>
+            <option value="complaint">Complaint</option>
+        </select><br><br>
+        
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50" required placeholder="Describe your message..."></textarea><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+
+### Notes:
+- Replace "news-image.jpg" and "video-id" with actual URLs or paths to your image and video content.
+- Forms (<form> element) are set to POST data to server-side scripts (submit-comment.php and submit-contact.php). Ensure to handle these submissions appropriately on your server.
+- This structure provides a basic layout as per your requirements. Further enhancements such as CSS styling, backend scripting (like PHP for form handling), and additional functionalities can be added as per actual project requirements.

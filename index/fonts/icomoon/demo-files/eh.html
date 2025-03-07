@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>new title bar</title>
+	<style>
+	*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+body{
+	background:linear-gradient(to bottom,#aca8ea,#ffe4ce);
+}
+.container{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+label{
+	display: block;
+	padding-left: 15px;
+	padding-top: 5px;
+	font-weight: 700;
+}
+form{
+	min-height: 100vh;
+	height: auto;
+	width: 50%;
+	background-color: white;
+}
+.email{
+	margin-top: 5px;
+}
+h3{ 
+	color:#BB6622;
+	padding-top: 160px;
+	padding-bottom: 20px;
+	padding-left: 15px;
+	font-size: 22px;
+}
+
+.check{
+	padding-left: 15px;
+	padding-top: 5px;
+}
+input[type="submit"],input[type="email"],input[type="password"]{
+	margin-left: 15px;
+	margin-top: 7px;
+	width: 94%;
+	padding: 2px;
+	color:white;
+	font-size: 18px;
+}
+input[type="submit"]{
+	background-color:#f39d57 ;
+	border:none;
+}
+@media only screen and (max-width: 600px){
+  .container{
+  	background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  form{
+  	width: 100%;
+  }
+  h3{
+  	padding-top: 70px;
+  }
+  input[type="submit"],input[type="email"],input[type="password"]{
+  	padding: 5px;
+  }
+ }
+</style>
+</head>
+<body>
+<div class="container">
+	<form>
+	 <h3>Login Form</h3>
+	 <div class="email">
+	 <label for="email" name="Email">Email :</label>
+	 <input type="email" name="email" id="email">
+	</div><div class="email">
+	 <label for="password" name="Password">Password :</label>
+	 <input type="password" name="pass" id="password">
+	</div>
+	<div class="check">
+	 <input type="checkbox" name="remember"> Remember Me
+	</div>
+	 <input type="submit" name="submit" value="login">
+	</form>
+</div>
+</body>
+</html>

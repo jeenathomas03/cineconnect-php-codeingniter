@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript-2</title>
+</head>
+	<body>
+		<script type="text/javascript">
+			var num = prompt("Enter a number");
+			var len = num.length;
+			var tep = num;
+			var sum = 0;
+			while(num>0){
+		    var rem = num%10;
+		        sum = sum+(rem**len);
+		        num = parseInt(num/10);
+			}
+			if(tep==sum){
+				console.log("its an armstrong number");
+			            }
+		    else{
+                console.log("its not armstrong number");
+		        }	
+	</script>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+body{
+	margin: 150px;
+	background-color: pink;
+    }
+p{
+	font-size: 25px;
+	text-indent: 50px;
+	letter-spacing: 3px;
+}

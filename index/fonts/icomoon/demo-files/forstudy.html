@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
+	<link rel="stylesheet" type="text/css" href="forstudy.css">
+	 <!-- internal css -->
+	 <style type="text/css">
+      body{
+         /*  it's an element selector*/
+           }
+       *{
+       	 /*it's an universal selector*/
+         color: black;
+        }    
+	 </style>
+</head>
+<body>
+		<form action="" method="post">
+	       <h1 class="para">Register Here!!!!!</h1>
+	          <label for="name">Name:</label>
+	          <input type="text"  placeholder="enter your name" name="name" minlength="10" maxlength="25" >
+	          <label for="text" value="test@example.com">Email:</label>
+	          <input type="email" name="email" autofocus>
+	          <label for="password">Password:</label>
+	          <input type="password" name="password" minlength="6" maxlength="10">
+	          <label>select category:</label>
+	                <select>
+		                 <option>student</option>
+		                 <option>employee</option>
+		                 <option selected>freelancer</option>
+	                </select>
+	          <label for="date">Event Date:</label>
+	          <input type="date">
+	<label for="ticket">Tickets:</label>
+    <input type="radio">Ticket1:
+    <input type="radio" checked="checked">Ticket2:
+    <input type="radio">Ticket3:
+    <label for="notes">Payment Mode:</label>
+    <input type="checkbox">Online payment:  
+    <label for="notes">Notes:</label>
+    <textarea placeholder="enter your notes"></textarea>
+   <!--  using attribute selector -->
+    <input type="submit" value="submit">
+    <!-- using inline css -->
+    <p style="font-size:20px"><q>This is our dream</q></p>
+     <!-- using id selectors -->
+    <footer id="footer">
+    	<p>about us</p>
+    	<p>contact us</p>
+    	<p>2nd floor RGbuilding
+    	pongumoodu,thiruvanathapuram</p>
+    </footer>
+</form>
+</body>
+</html> 

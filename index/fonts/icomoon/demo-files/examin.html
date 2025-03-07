@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>table</title>
+    <style>
+        table,tr,th,td{
+            border: 3px solid;
+            border-collapse: collapse;
+            
+        }
+        .table{
+            width: 700px;
+            height: 500px;
+            text-align: center;
+
+        }
+        .green{
+            background-color: green;
+        }
+        .peach{
+            background-color: peachpuff;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .vt{
+            background-color: violet;
+        }
+        .brown{
+            background-color: brown;
+        }
+        .orange{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+	<h1><u>CSS TABLE</u></h1>
+	<table class="table">
+        <!-- row 1 -->
+		<tr class="green">
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+            <td colspan="2">dddd</td>
+            
+        </tr>
+        <!-- row 2 -->
+        <tr class="peach">
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td rowspan="3">cccc</td>
+            <td rowspan="5" colspan="2">dddd</td>
+            
+        </tr>
+        <!-- row 3 -->
+        <tr class="orange">
+            <td rowspan="">aaaa</td>
+            <td>bbbb</td>
+           
+        </tr>
+        <!-- row 4 -->
+        <tr class="yellow">
+            <td>aaaa</td>
+            <td rowspan="5">bbbb</td>
+            
+        </tr>
+        <!-- row 5 -->
+        <tr class="blue">
+            <td>aaaa</td>
+            <td>bbbb</td>
+            
+        </tr>
+        <!-- row 6 -->
+        <tr class="brown">
+            <td>aaaa</td>
+            <td>bbbb</td>
+        </tr>
+        <!-- row 7 -->
+        <tr class="blue">
+            <td rowspan="1">aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+            <td>dddd</td>
+        </tr>
+        <!-- row 8 -->
+        <tr class="vt">
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+            <td>dddd</td>
+        </tr>
+	</table>
+</body>
+</html>

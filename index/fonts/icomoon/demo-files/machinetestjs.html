@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<p id="m1"></p>
+	<p id="m2"></p>
+	<script type="text/javascript">
+		// Create a variable and print it in console
+		var x="hello world";
+		console.log(x);
+		// Create a variable and print it in the browser
+		var text="Javascript";
+		document.getElementById("m1").innerHTML= text;
+		// Create an array and print the second element in console
+		var arr=["apple","pineapple","cherry","banana"]
+		console.log(arr[1]);
+		// Create an array and print the third element in browser
+		var arr=["apple","banana","cherry","pineapple"]
+		document.getElementById("m2").innerHTML=arr[2];
+		// Create an object and print its property in console
+		var obj={
+                 name:"jeena",
+                 age:21,
+                 place:"punalur"
+		         }
+        console.log(obj.name);
+        // Create an object and print its property in browser
+        var person={
+                 name:"jeena",
+                 age:21,
+                 place:"punalur"
+		         }
+        document.write(person.place);
+        // Create an array within an array and print it in console
+        var fruits=[["1","apple"],["2","orange"],["3","grapes"],["4","srawberry"],["5","pineapple"]];
+        console.log(fruits);
+        console.log(fruits[3][0]);
+        console.log(fruits[2][1]);
+        // Create an array within an array and print it in browser
+        var fruits=[["1","apple"],["2","orange"],["3","grapes"],["4","srawberry"],["5","pineapple"]];
+        document.write(fruits);
+        document.write(fruits[3][0]);
+        document.write(fruits[2][1]);
+        // Create an object within an object and print it in console
+        // Create an object within an object and print it in browser
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript-Exam2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- html body -->
+    <div class="container p-5">
+         <button onclick="lotteryResult()" class="btn btn-secondary" data-toggle="modal" data-target="#modal">SELECT WINNER</button><br><br>
+         <p id="displayWinner" class="p-5" style="color: red;"></p>
+    <!-- for display modal -->
+    <div class="modal" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>THE WINNER IS</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                 <div class="modal-body" id="modalBody">
+                    
+                </div>
+                 <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript">
+        var lotteryNumbers = [234333,452366,456666,565554,557655,245768,928747,295647,654473,989976,465007,768959,678855,887755,768964,546478]
+
+        function lotteryResult()
+        {
+        var selectRandom = Math.floor(Math.random()*lotteryNumbers.length);
+        var winner = lotteryNumbers[selectRandom];
+        console.log("The winner is: "+ winner);
+        var result = document.getElementById("displayWinner").innerHTML = "The Winner is: " + winner;
+        document.getElementById("modalBody").innerHTML=winner;
+        }
+    </script>
+</body>
+</html>

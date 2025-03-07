@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .calculator {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        .calculator input, .calculator select, .calculator button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .calculator button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .calculator button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <input type="number" id="firstNumber" placeholder="First Number">
+    <input type="number" id="secondNumber" placeholder="Second Number">
+    <select id="operation">
+        <option value="add">+</option>
+        <option value="subtract">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+    </select>
+    <button onclick="calculate()">Calculate</button>
+    <input type="text" id="result" placeholder="Result" readonly>
+</div>
+
+<script>
+    function calculate() {
+        var firstNumber = document.getElementById('firstNumber').value;
+        var secondNumber = document.getElementById('secondNumber').value;
+        var operation = document.getElementById('operation').value;
+        var result;
+
+        if (operation === "add") {
+            result = firstNumber + secondNumber;
+        } else if (operation === "subtract") {
+            result = firstNumber - secondNumber;
+        } else if (operation === "multiply") {
+            result = firstNumber * secondNumber;
+        } else if (operation === "divide") {
+            if (secondNumber !== 0) {
+                result = firstNumber / secondNumber;
+            } else {
+                result = "Cannot divide by zero";
+            }
+        }
+
+        document.getElementById('result').value = result;
+    }
+</script>
+
+</body>
+</html>

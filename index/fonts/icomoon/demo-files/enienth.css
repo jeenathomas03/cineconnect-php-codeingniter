@@ -1,0 +1,70 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.navbar ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.navbar ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  background-color: #555;
+}
+
+/* Articles section styles */
+.articles {
+  margin-top: 20px;
+}
+
+.articles article {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.articles article.bordered {
+  border: 2px solid #333;
+}
+
+.articles h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.articles p {
+  margin-bottom: 15px;
+}
+
+.articles p:first-of-type {
+  font-weight: bold;
+}

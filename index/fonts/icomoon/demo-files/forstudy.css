@@ -1,0 +1,21 @@
+/*using external css*/
+/*color #f0f0f0 hexa value for color*/
+.para{
+      color: grey;
+      font-size: 40px;
+      }
+#footer{
+        font-size: 20px; 
+       }
+/*using attribute selector*/
+input[type="submit"]{
+       background-color: snow;
+       border:1px solid blue;
+      }
+ form{
+ 	border: outset grey;
+ 	width: 500px;
+ 	height: 600px;
+ 	border-width: thick;
+ 	border-radius: 12px;
+ }

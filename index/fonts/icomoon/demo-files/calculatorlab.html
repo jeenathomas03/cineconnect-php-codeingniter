@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+    	  body{
+               background-color: black;
+    	      }
+    	  .container{
+                     padding-top: 200px;
+    	            }
+    	  .card{
+                background: linear-gradient(black,blue);
+              
+    	       }
+    	  button{ 
+                 background-color: black ;
+                 color: white;
+                 height: 50px;
+    	        }
+    	  input,select{
+                text-align: center;
+                height: 50px;
+                border:none;
+    	       }
+    </style>
+</head>
+<body>
+	<div class="container">
+		<div class="card p-5">
+		<br>	
+		   <input type="text"  id="firstnumber" placeholder="Enter First Number" required><br>
+		   <select id="operation" required>
+		   	      <option value="add">+</option>
+		   	      <option value="substract">-</option>
+		   	      <option value="multiply">*</option>
+		   	      <option value="divide">/</option>
+		   </select><br>
+		   <input type="text"  id="secondnumber" placeholder="Enter Second Number" required><br>
+		   <button onclick="calculator()">result</button><br>
+		   <input type="text"  id="result" placeholder="result" readonly><br>
+		<br>
+		</div>
+	</div>
+<script type="text/javascript">
+	 function calculator() {
+        var firstNumber = parseFloat(document.getElementById('firstnumber').value);
+        var secondNumber = parseFloat(document.getElementById('secondnumber').value);
+        var operation = document.getElementById('operation').value;
+        var result;
+
+        if (operation == "add") {
+            result = firstNumber + secondNumber;
+        } else if (operation == "subtract") {
+            result = firstNumber - secondNumber;
+        } else if (operation === "multiply") {
+            result = firstNumber * secondNumber;
+        } else if (operation === "divide") {
+            if (secondNumber !== 0) {
+                result = firstNumber / secondNumber;
+            } else {
+                result = "Cannot divide by zero";
+            }
+        }
+
+        document.getElementById('result').value = result;
+    }
+
+</script>
+</body>
+</html>

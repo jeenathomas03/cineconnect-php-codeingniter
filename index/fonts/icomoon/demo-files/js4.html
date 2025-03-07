@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Getters and Setters</h2>
+
+<p id="demo"></p>
+
+<script>
+var myCar = { 
+    color: "blue", 
+    make: "Toyota",
+
+    // Getter Methods
+    getCar: function() { 
+        return "This is a " + this.color + "  " + this.make + "."; 
+    },
+    
+    getColor: function() { 
+		return this.color; 
+    },
+
+    getMake: function() { 
+	return this.make; 
+    },  
+
+    // Setter methods 
+    setColor: function(newColor) {
+        this.color = newColor;
+    },
+
+    setMake: function(newMake) {
+	this.make = newMake;
+    }
+};
+myCar.setColor("red");
+myCar.setMake("Audi");
+document.getElementById("demo").innerHTML = myCar.getCar();
+</script>
+</body>
+</html>	

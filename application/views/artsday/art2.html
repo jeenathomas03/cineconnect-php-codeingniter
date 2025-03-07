@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br><!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>artsday</title>
+      <style>
+          body {
+              /* Set the background image */
+              background-image: url('art.jpg');
+  
+              /* Ensure the background covers the entire page */
+              background-size: cover;
+  
+              /* Center the background image */
+              background-position: center;
+  
+              /* Set a fallback background color */
+              background-color: #cccccc;
+  
+              /* Prevent the background image from repeating */
+              background-repeat: no-repeat;
+  
+              /* Ensure the content scrolls over the background */
+              background-attachment: fixed;
+  
+              /* Set some padding and margin to prevent content from touching the edges */
+              margin: 0;
+              padding: 0;
+          }
+  
+          /* Additional styles for content */
+          .content {
+              color: white;
+              text-align: center;
+              padding: 50px;
+              font-family: Arial, sans-serif;
+          }
+      </style>
+  </head>
+  <body>
+    <center>
+    <form id="myForm" action="" method="post">
+     <div style="width:50%;">
+        <input type="hidden" name="hide" value="h">
+       <input type="text" id="name" name="name" placeholder="Name"  class="form-control mb-2" required pattern="^[A-Za-z\s]{1,50}" >
+                <span class="error" id="nameError"></span>
+     </br>
+  
+  
+<select class="form-control mb-2" name="gender">
+<option value="">Select gender</option>
+<option>Male</option>
+<option>female</option></select>
+
+<br>
+<select class="form-control mb-2" name="programs">
+<option value="">select program</option>
+<option>Classical Dance</option>
+<option>Malayalam Speech</option>
+<option>English speech</option>
+<option>Pencil Drawing</option>
+<option>Nadanpattu</option>
+<option>Margamkali</option>
+<option>Watercolor</option>
+<option>Story writing</option>
+<option>Song Writing</option>
+<option>Cinema Song</option>
+<option>Classical Song</option>
+<option></option>
+<option>Classical Dance</option>
+<option>Classical Dance</option>
+<option>Classical Dance</option>
+<option>Classical Dance</option>
+<option>Classical Dance</option>
+<option>Classical Dance</option>
+<option>Classical Dance</option>
+<option>Classical Dance</option>
+<option>Classical Dance</option>
+
+</select>
+    <br>
+    <select class="form-control mb-2" name="course">
+    <option value="">select course</option>
+    <option>1st year Bca</option>
+    <option>2nd year Bca</option>
+    <option>3rd year Bca</option>
+    <option>1st year Bsc Chemestry</option>
+    <option>2nd year Bsc Chemestry</option>
+    <option>3rd year Bsc Chemestry</option>
+    <option>1st year Bsc Maths</option>
+    <option>2nd year Bsc Maths</option>
+    <option>3rd year Bsc Maths</option>
+    <option>1st year Bsc Physics</option>
+    <option>2nd year Bsc Physics</option>
+    <option>3rd year Bsc Physics</option>
+    <option>1st year Bsc Botony</option>
+    <option>2nd year Bsc Botony</option>
+    <option>3rd year Bsc Botony</option>
+    
+    
+</select>
+    <br>
+        <input type="text" id="contact" name="contact" placeholder="Contact" required pattern="^\d{10}$" class="form-control mb-2">
+        <span class="error" id="contactError"></span>
+        <br>
+
+        <input type="email" name="email"  id="email" required placeholder="Email" class="form-control mb-2"></td></tr>
+        <span class="error" id="emailError"></span>
+        <br>
+
+    <input type="password" id="password" name="password" placeholder="Password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" class="form-control mb-2"></td></tr>
+        <span class="error" id="passwordError"></span>
+        <br>
+
+
+
+     <input type="submit" value="Register" class="btn btn-primary"><br><br><br>
+    </form>
+</div>
+</center>
+    <script>
+        const form = document.getElementById("myForm");
+
+        form.addEventListener("submit", function (event) {
+            if (!validateForm()) {
+                event.preventDefault();
+            }
+        });
+
+        const inputs = form.querySelectorAll("input[required]");
+
+        inputs.forEach(input => {
+            input.addEventListener("input", function () {
+                validateField(input);
+            });
+        });
+
+        function validateField(input) {
+            const name = input.name;
+            const pattern = input.getAttribute("pattern");
+            const errorSpan = document.getElementById(name + "Error");
+
+            if (!input.checkValidity()) {
+                errorSpan.textContent = input.validationMessage;
+                errorSpan.style.display = "block";
+            } else {
+                errorSpan.textContent = "";
+                errorSpan.style.display = "none";
+            }
+        }
+
+        function validateForm() {
+            let valid = true;
+            inputs.forEach(input => {
+                validateField(input);
+                if (input.checkValidity() === false) {
+                    valid = false;
+                }
+            });
+            return valid;
+        }
+    </script>
+  
+</body>
+
+
+</html>

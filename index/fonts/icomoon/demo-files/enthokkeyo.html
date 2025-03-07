@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>table</title>
+    <style type="text/css">
+        body {
+
+        }
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            height: 200px;
+        }
+        .green {
+            background-color: green;
+        }
+        .pink {
+            background-color: pink;
+        }
+        .red {
+            background-color: red;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .brown {
+            background-color: brown;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" class="table">
+        <!-- row1 -->
+        <tr class="green">
+            <th>col1</th>
+            <th>col2</th>
+            <th>col3</th>
+            <th>col4</th>
+        </tr>
+        <!-- row2 -->
+        <tr class="pink">
+            <td rowspan="4">col1</td>
+            <td rowspan="4">col2</td>
+            <td rowspan="6">col3</td>
+            <td rowspan="11">col4</td>
+        </tr>
+        <!-- row3 -->
+        <tr>
+            <td>col1</td>
+            <td>col2</td>
+            <td>col3</td>
+            <td>col4</td>
+        </tr>
+        <tr>
+            <td>col1</td>
+            <td>col2</td>
+            <td>col3</td>
+            <td>col4</td>
+        </tr>
+        <tr>
+            <td>col1</td>
+            <td>col2</td>
+            <td>col3</td>
+        </tr>
+        <!-- row4 -->
+        <tr class="red">
+            <td>col1</td>
+            <td>col2</td>
+        </tr>
+        <!-- row5 -->
+        <tr class="yellow">
+            <td>col1</td>
+            <td rowspan="12">col2</td>
+        </tr>
+        <!-- row6 -->
+        <tr class="blue">
+            <td>col1</td>
+            <td>col3</td>
+        </tr>
+        <!-- row7 -->
+        <tr class="brown">
+            <td rowspan="3">col1</td>
+            <td rowspan="4">col2</td>
+        </tr>
+        <!-- row8 -->
+        <tr>
+            <td colspan="2">col4</td>
+        </tr>
+        <!-- row9 -->
+        <tr>
+            <td rowspan="5">col3</td>
+            <td rowspan="5">col4</td>
+            <td rowspan="5">col5</td>
+        </tr>
+    </table>
+</body>
+</html>

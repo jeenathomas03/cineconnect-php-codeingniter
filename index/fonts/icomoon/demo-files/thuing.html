@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery Winner Selector</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container p-5">
+        <button onclick="selectWinner()" class="btn btn-primary">Select Winner</button><br><br>
+        <p id="winnerDisplay" style="font-size: 24px;"></p>
+    </div>
+
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="winnerModal" tabindex="-1" role="dialog" aria-labelledby="winnerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="winnerModalLabel">Lottery Winner</h5>
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button> -->
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <!-- Winning number will be displayed here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // Sample array of lottery ticket numbers
+        var lotteryNumbers = [1023, 4536, 7890, 1122, 3344, 5566, 7788, 9900];
+
+        function selectWinner() {
+            // Select a random winner
+            var winnerIndex = Math.floor(Math.random() * lotteryNumbers.length);
+            var winner = lotteryNumbers[winnerIndex];
+
+            // 1. Display the winner in the console
+            console.log("The winning number is: " + winner);
+
+            // 2. Display the winner on the HTML page in red color
+            var winnerDisplay = document.getElementById('winnerDisplay');
+            winnerDisplay.innerText = "The winning number is: " + winner;
+            winnerDisplay.style.color = "red";
+
+            // 3. Display the winner inside the Bootstrap modal popup
+            document.getElementById('modalBody').innerText = "The winning number is: " + winner;
+            $('#modal').modal('show');
+        }
+    </script>
+</body>
+</html>

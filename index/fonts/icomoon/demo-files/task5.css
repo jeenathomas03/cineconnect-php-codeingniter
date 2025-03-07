@@ -1,0 +1,52 @@
+body{
+     margin: 80px;
+     background-color: linen;
+     /*background : limegreen*/
+    }
+h2{
+	text-align: center;
+	font-size: 60px;
+}
+nav{
+    font-size: 25px;
+    text-align: center;
+    background: grey;
+    padding: 20px 20px;
+    letter-spacing: 6px;
+
+   }
+a{
+	color: white;
+	text-decoration: none;
+} 
+
+a:hover{ 
+	color: blue;
+       }  
+p{
+  font-size: 30px
+}
+.head::before{
+	content: url("sticker3.png");
+	width: 100px;
+	height: 100px;
+	/*display: block;*/
+	
+}
+.heads::before{
+	content: url("sticker4.png");
+}
+.thing::before{
+	content: url("sticker7.png");
+}
+.art{
+	border: 5px solid grey;
+}
+p::first-line{
+     font-weight: bold;
+}
+h1{
+	font-weight: bold;
+	font-size: 50px;
+	text-align: center;
+}

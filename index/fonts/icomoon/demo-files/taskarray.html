@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript-1</title>
+</head>
+<body>
+	<!-- task 2 -->
+    <p id="favorites"></p>
+    <p id="favorite"></p>
+    <p id="fav"></p>
+    <script language="javascript" type="text/javascript">
+
+    // task 1
+     var fruits = ["apple","mango","litchi","orange"];
+     console.log(fruits[0]);
+     console.log(fruits[1]);
+     console.log(fruits[2]);
+     console.log(fruits[3]);
+
+    // task 2
+     var age = [23,45,67,87,34];
+     age.push(78);
+     document.getElementById("favorites").innerHTML=age;
+     text="<br>"
+     age.pop();
+     document.getElementById("favorite").innerHTML=age;
+
+    // task 3
+	  var num=[23,33,7,1,8];
+	  num.sort();
+	  console.log(num)
+	  function descending() {
+      num.sort(function(a,b){return b-a});
+	  }
+	  descending();
+	  console.log(num);
+       
+    // task 4
+      // var txt="";
+      // var fruit =  ["apple","mango","litchi","orange","grapes","avacado"];
+      // fruit.forEach(myFunction);
+         var txt = "";
+         var fruit = ["apple","mango","litchi","orange"];
+         fruit.forEach(myFunction);
+         document.getElementById("fav").innerHTML = txt;
+
+         function myFunction(value, index, array) {
+         txt = txt +index+value + "<br>"; 
+         }
+
+
+   </script>
+</body>
+</html>

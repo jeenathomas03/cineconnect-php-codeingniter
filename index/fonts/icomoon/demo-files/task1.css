@@ -1,0 +1,31 @@
+body
+{
+	background-image: url("img3.jpg");
+	background-repeat: no-repeat;
+	margin: 100px;
+	background-attachment: fixed;
+	/*content: 500px;	*/
+}
+h1
+{
+text-align: center;
+background-image: url("img4.jpg");
+border-width: 30px;
+
+}
+div
+{
+background-image: url("123.jpeg");
+background-repeat: repeat-y;
+font-size: 30px;
+}
+table,tr,td,th
+{
+font-size: 30px;
+/*background: conic-gradient(from 0deg,#add8e6, #808080);*/
+background: radial-gradient(#add8e6, #808080);
+/*background: linear-gradient(#add8e6, #808080);*/
+height: 50px;
+/*background-color:hsla(0, 100%, 50%,0.8);*/
+}
+
